@@ -1,13 +1,15 @@
 #include "CoordParams.h"
 
-std::vector<unsigned char> CoordParams::ParamDataFromCoordinates(std::vector<cv::Point2f>& points)
+__int64 CoordParams::SerialDataFromPoints(std::vector<cv::Point2f> points,unsigned char* buf, unsigned int size)
 {
-	std::vector<unsigned char> coordParams;
-	coordParams.push_back((unsigned char)points.size());	
-	for (auto i : points)
+	unsigned char* begin = buf;
+	if (size < 2*points.size()+1 || ((size & 1) == 0))
+		return 0;
+	*(buf++) = (unsigned char)points.size();
+	for (auto& i : points)
 	{
-		coordParams.push_back((unsigned char)i.x);
-		coordParams.push_back((unsigned char)i.y);
+		*(buf++) = (unsigned char) i.x;
+		*(buf++) = (unsigned char) i.y;
 	}
-	return coordParams;
+	return buf - begin;
 }

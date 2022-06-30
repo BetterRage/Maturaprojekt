@@ -2,6 +2,7 @@
 #include "Helpers.h"
 #include "OCVProc.h"
 #include "SerialPort.h"
+#include "CoordParams.h"
 
 #include <wx/wxprec.h>
 #ifndef WX_PRECOMP

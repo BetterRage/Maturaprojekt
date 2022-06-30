@@ -1,10 +1,9 @@
 #pragma once
 #include "opencv2/core.hpp"
-#include <string>
 #include <vector>
 class CoordParams
 {
 public:
-	static std::vector<unsigned char> ParamDataFromCoordinates(std::vector<cv::Point2f>& points);
+	static __int64 SerialDataFromPoints(std::vector<cv::Point2f> points, unsigned char* buf, unsigned int size);
 };
 

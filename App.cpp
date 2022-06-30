@@ -4,10 +4,7 @@
 wxIMPLEMENT_APP(App);
 bool App::OnInit()
 {
-	
-	std::vector<unsigned long> portIDS = MCUConn::FindAvailableComPorts();
-	SelectCOMPort(portIDS);
-		
+	SelectCOMPort(MCUConn::FindAvailableComPorts());
 
 	if (!SelectCameraDialog())
 		return false;
@@ -19,8 +16,9 @@ bool App::OnInit()
 }
 bool App::SelectCOMPort(std::vector<unsigned long> ports)
 {
-	
 	wxArrayString portNames;
+	//if (portNames.size() == 0);
+		//return false;
 	for (auto i : ports)
 	{
 		wxString name("COM");
@@ -28,9 +26,9 @@ bool App::SelectCOMPort(std::vector<unsigned long> ports)
 		portNames.Add(name);
 	}
 	int selectedIndex = SelectString(nullptr, portNames);
-	if (selectedIndex>=0)
+	if (selectedIndex!=-1)
 	{
-		serialPort.OpenPort(ports[selectedIndex]);
+		serialPort.OpenPort(ports[selectedIndex],BR_9600);
 	}
 	return serialPort.open;
 }

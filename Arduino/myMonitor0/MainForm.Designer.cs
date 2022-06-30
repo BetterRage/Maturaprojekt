@@ -55,10 +55,10 @@ namespace myMonitor0
             // buttonConnect
             // 
             this.buttonConnect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConnect.Location = new System.Drawing.Point(29, 24);
-            this.buttonConnect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonConnect.Location = new System.Drawing.Point(22, 20);
+            this.buttonConnect.Margin = new System.Windows.Forms.Padding(2);
             this.buttonConnect.Name = "buttonConnect";
-            this.buttonConnect.Size = new System.Drawing.Size(131, 36);
+            this.buttonConnect.Size = new System.Drawing.Size(98, 29);
             this.buttonConnect.TabIndex = 0;
             this.buttonConnect.Text = "connect";
             this.buttonConnect.UseVisualStyleBackColor = true;
@@ -67,31 +67,31 @@ namespace myMonitor0
             // textBoxCOM
             // 
             this.textBoxCOM.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxCOM.Location = new System.Drawing.Point(29, 81);
-            this.textBoxCOM.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCOM.Location = new System.Drawing.Point(22, 66);
+            this.textBoxCOM.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCOM.Name = "textBoxCOM";
-            this.textBoxCOM.Size = new System.Drawing.Size(68, 27);
+            this.textBoxCOM.Size = new System.Drawing.Size(52, 23);
             this.textBoxCOM.TabIndex = 1;
             this.textBoxCOM.Text = "COM2";
             // 
             // textBoxIN
             // 
             this.textBoxIN.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxIN.Location = new System.Drawing.Point(201, 24);
-            this.textBoxIN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxIN.Location = new System.Drawing.Point(151, 20);
+            this.textBoxIN.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIN.Multiline = true;
             this.textBoxIN.Name = "textBoxIN";
             this.textBoxIN.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBoxIN.Size = new System.Drawing.Size(233, 352);
+            this.textBoxIN.Size = new System.Drawing.Size(176, 287);
             this.textBoxIN.TabIndex = 2;
             // 
             // buttonReset
             // 
             this.buttonReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonReset.Location = new System.Drawing.Point(29, 337);
-            this.buttonReset.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonReset.Location = new System.Drawing.Point(22, 274);
+            this.buttonReset.Margin = new System.Windows.Forms.Padding(2);
             this.buttonReset.Name = "buttonReset";
-            this.buttonReset.Size = new System.Drawing.Size(131, 36);
+            this.buttonReset.Size = new System.Drawing.Size(98, 29);
             this.buttonReset.TabIndex = 3;
             this.buttonReset.Text = "reset";
             this.buttonReset.UseVisualStyleBackColor = true;
@@ -99,24 +99,26 @@ namespace myMonitor0
             // 
             // serialPort1
             // 
+            this.serialPort1.BaudRate = 115200;
             this.serialPort1.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SerialPort1DataReceived);
             // 
             // checkBoxOverwrite
             // 
             this.checkBoxOverwrite.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.125F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBoxOverwrite.Location = new System.Drawing.Point(29, 299);
-            this.checkBoxOverwrite.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.checkBoxOverwrite.Location = new System.Drawing.Point(22, 243);
+            this.checkBoxOverwrite.Margin = new System.Windows.Forms.Padding(2);
             this.checkBoxOverwrite.Name = "checkBoxOverwrite";
-            this.checkBoxOverwrite.Size = new System.Drawing.Size(123, 27);
+            this.checkBoxOverwrite.Size = new System.Drawing.Size(92, 22);
             this.checkBoxOverwrite.TabIndex = 4;
             this.checkBoxOverwrite.Text = "overwrite";
             this.checkBoxOverwrite.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(29, 131);
+            this.button1.Location = new System.Drawing.Point(22, 106);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(56, 19);
             this.button1.TabIndex = 5;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
@@ -124,16 +126,16 @@ namespace myMonitor0
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 397);
+            this.ClientSize = new System.Drawing.Size(358, 323);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.checkBoxOverwrite);
             this.Controls.Add(this.buttonReset);
             this.Controls.Add(this.textBoxIN);
             this.Controls.Add(this.textBoxCOM);
             this.Controls.Add(this.buttonConnect);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainForm";
             this.Text = "myMonitor0";
             this.ResumeLayout(false);
